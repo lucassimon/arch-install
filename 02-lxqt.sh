@@ -33,7 +33,7 @@ sudo pacman -S gst-plugins-good gst-plugins-bad gst-plugins-base gst-plugins-ugl
 
 echo "https://github.com/gabretana/lxqt-arc-dark-theme"
 
-sudo pacman -S arc-kde kvantum-theme-arc papirus-icon-theme --noconfirm
+sudo pacman -S arc-kde kvantum-theme-arc adapta-kde kvantum-theme-adapta papirus-icon-theme --noconfirm
 
 
 
