@@ -6,8 +6,10 @@ echo "sublime"
 yay -S --noconfirm sublime-text-dev
 
 echo "vscode"
-#yay -S visual-studio-code-bin
-yay -S --noconfirm visual-studio-code
+
+yay -S visual-studio-code-bin --noconfirm
+
+# yay -S --noconfirm visual-studio-code
 
 
 echo "PYTHON"
