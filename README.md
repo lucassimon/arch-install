@@ -143,7 +143,14 @@ mkinitcpio -p linux
 ```
 
 ## ferramentas para wifi
+
 ```shell
+pacman -S wget
+
+wget "https://gitlab.com/terminalroot/arch/raw/master/mirror-br" -O /etc/pacman.d/mirrorlist 2>/dev/null
+
+pacman -Syyu
+
 pacman -S autoconf automake binutils make git vim zsh net-tools wireless_tools wpa_supplicant wpa_actiond dialog
 ```
 
