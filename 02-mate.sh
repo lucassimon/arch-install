@@ -3,6 +3,7 @@ set -e
 
 sudo pacman -Syyu --noconfirm
 
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # Install Yay if not installed previously
 git clone https://aur.archlinux.org/yay.git
