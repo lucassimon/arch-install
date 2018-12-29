@@ -13,4 +13,10 @@ pacman -S vim zsh wireless_tools wpa_supplicant wpa_actiond dialog autoconf auto
 useradd -m -g users -G storage,network,power,wheel,audio,video -s /bin/zsh "lucas"
 passwd "lucas"
 
+# Install Yay if not installed previously
+git clone https://aur.archlinux.org/yay.git
+cd yay && makepkg -si
+
+echo "add user on sudoers"
+
 echo "reboot"
