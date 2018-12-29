@@ -12,6 +12,9 @@ sudo pacman -S vim xorg-server xf86-input-mouse xf86-input-keyboard xf86-video-v
 
 sudo pacman -S xfce4 xfce4-goodies --noconfirm --needed
 
+sudo pacman -S thunar thunar-archive-plugin thunar-volman --noconfirm
+
+
 sudo systemctl enable lightdm.service -f
 sudo systemctl set-default graphical.target
 
