@@ -3,8 +3,6 @@ set -e
 
 echo "Installing category Accessories"
 
-sudo pacman -S --noconfirm --needed galculator
-sudo pacman -S --noconfirm --needed gnome-screenshot
 #sudo pacman -S --noconfirm --needed
 
 echo "Installing category Education"
@@ -14,9 +12,9 @@ echo "Installing category Games"
 echo "Installing category Internet"
 
 sudo pacman -S --noconfirm --needed chromium
-#sudo pacman -S --noconfirm --needed filezilla
+
 sudo pacman -S --noconfirm --needed firefox
-#sudo pacman -S --noconfirm --needed hexchat
+
 sudo pacman -S --noconfirm --needed transmission-cli
 sudo pacman -S --noconfirm --needed transmission-gtk
 #sudo pacman -S --noconfirm --needed
@@ -33,7 +31,7 @@ sudo pacman -S --noconfirm --needed curl ffmpegthumbnailer git gvfs gvfs-mtp hto
 
 sudo pacman -S --noconfirm --needed hardinfo htop lm_sensors lsb-release mlocate net-tools numlockx
 
-sudo pacman -S --noconfirm --needed thunar thunar-archive-plugin thunar-volman ttf-ubuntu-font-famil ttf-droid 
+sudo pacman -S --noconfirm --needed  ttf-ubuntu-font-famil ttf-droid 
 
 # sudo  pacman -S --noconfirm --needed rxvt-unicode
 
