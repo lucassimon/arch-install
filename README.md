@@ -1,11 +1,11 @@
 # Arch Install:
 
-## teclado em portugues
+## Set keyboard portugues
 ```shell
 # loadkeys br-abnt2
 ```
 
-## criar partições
+## Gparted partitions
 
 Particionar o `HOME`, `CURSOS` e o `WORKSPACES`
 
@@ -23,7 +23,7 @@ Particionar o `HOME`, `CURSOS` e o `WORKSPACES`
 cfdisk /dev/sda
 ```
 
-## formatar partições
+## Format sda[x]
 
 Não formatar as partições `CURSOS` e `WORKSPACES`
 
@@ -32,26 +32,26 @@ mkfs.ext4 /dev/sda1
 mkfs.ext4 /dev/sda6
 ```
 
-## ligar swap
+## Swapon
 
 ```shell
 mkswap /dev/sda5 && swapon /dev/sda5
 ```
 
-## se tiver conexao com wifi pode usar o
+## If you have wifi
 ```shell
 iwconfig # para visualizar os wifi
 wifi-menu nomedawifi
 ```
 
-## setar o systemclock
+## Set o systemclock
 
 ```shell
 timedatectl set-ntp true
 ```
 
 
-## pontos de montagem
+## Mount the sda[x]
 
 Montar todas as partições em um respectivo diretório do `/mnt`
 
@@ -63,13 +63,13 @@ mount /dev/sda7 /mnt/arch/courses
 mount /dev/sda8 /mnt/arch/workspaces
 ```
 
-## pronto para instalar a base do sistema / base-devel
+## Install base and base-devel
 
 ```shell
 pacstrap /mnt base base-devel
 ```
 
-## Gerar fstab
+## Gen fstab
 
 ```shell
 genfstab -U  /mnt >> /mnt/etc/fstab
@@ -81,14 +81,14 @@ genfstab -U  /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
 ```
 
-## Defina o fuso horário:
+## Set date time
 
 ```shell
 ln -s /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
 ```
 
-## LOCALE
+## Set LOCALE
 
 Tire o comentario # de  pt_BR.UTF-8 UTF-8 e qualquer outra localização em `/etc/locale.gen`
 
@@ -106,7 +106,7 @@ E gere-as com:
 locale-gen
 ```
 
-## Se você definir o layout do teclado, torne as alterações persistentes em vconsole.conf(5):
+## Set keyboar layout in vconsole.conf(5):
 
 ```shell
 nano /etc/vconsole.conf
@@ -116,7 +116,7 @@ nano /etc/vconsole.conf
 KEYMAP=br-abnt2
 ```
 
-## Crie o arquivo hostname:
+## Set hostname:
 
 ```shell
 vim /etc/hostname
@@ -124,7 +124,7 @@ vim /etc/hostname
 
 notebook
 
-## Adicione entradas correspondentes ao hosts(5):
+## Adds  hosts(5):
 
 ```shell
 vim /etc/hosts
@@ -136,43 +136,45 @@ vim /etc/hosts
 127.0.1.1 notebook.localdomain notebook
 ```
 
-## gerar scripts
+## Gen scripts
 
 ```shell
 mkinitcpio -p linux
 ```
 
-## ferramentas para wifi
+## net tools and wifi
 
 ```shell
-pacman -S wget
 
-wget "https://gitlab.com/terminalroot/arch/raw/master/mirror-br" -O /etc/pacman.d/mirrorlist 2>/dev/null
+# pacman -S wget
+# mirror-br out of date do not run it 
+# wget "https://gitlab.com/terminalroot/arch/raw/master/mirror-br" -O /etc/pacman.d/mirrorlist 2>/dev/null
+#
 
 pacman -Syyu
 
 pacman -S autoconf automake binutils make git vim zsh net-tools wireless_tools wpa_supplicant wpa_actiond dialog
 ```
 
-## senha de root
+## root password
 
 ```shell
 passwd
 ```
 
-## atualizar sistema
+## Upgrade the system
 
 ```shell
 pacman -Syyu
 ```
 
-## Se tiver dual boot tem q instalar o:
+## If you have dual boot
 
 ```shell
 pacman -S os-prober
 ```
 
-## Instalar grub
+## Install grub
 
 ```shell
 pacman -S grub
@@ -180,7 +182,7 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-## Finalizando
+## Finish
 
 ```shell
 exit
