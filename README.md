@@ -144,7 +144,7 @@ mkinitcpio -p linux
 
 ## ferramentas para wifi
 ```shell
-pacman -S vim zsh wireless_tools wpa_supplicant wpa_actiond dialog
+pacman -S autoconf automake binutils make git vim zsh net-tools wireless_tools wpa_supplicant wpa_actiond dialog
 ```
 
 ## senha de root
