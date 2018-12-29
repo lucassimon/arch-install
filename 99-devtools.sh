@@ -45,14 +45,21 @@ sudo systemctl start docker
 
 sudo systemctl enable docker
 
-yay -S docker-compose
-
+yay -S docker-compose --noconfirm
 
 echo "INSOMINA"
 
+yay -S insomnia --noconfirm 
+
 echo "ROBOT3T"
+
+yay -S robo3t-bin --noconfirm
 
 echo "Redis Desktop web"
 
+yay -S redis-desktop-manager --noconfirm
+
 echo "PGWEB"
+
+yay -S pgweb-bin --noconfirm
 
