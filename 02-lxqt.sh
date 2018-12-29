@@ -12,9 +12,7 @@ sudo pacman -S vim xorg-server xf86-input-mouse xf86-input-keyboard xf86-video-v
 
 sudo pacman -S lxqt lxqt-config lxqt-panel lxqt-policykit lxqt-qtplugin lxqt-session lxqt-sudo pcmanfm-qt lxqt-about lxqt-admin lxqt-globalkeys lxqt-notificationd lxqt-openssh-askpass lxqt-powermanagement lxqt-runner --noconfirm
 
-sudo pacman -S openbox qterminal oxygen-icons qpdfview speedcrunch lximage-qt qt5-translations obconf-qt  --noconfirm
-
-
+sudo pacman -S openbox qterminal oxygen-icons qpdfview lximage-qt qt5-translations obconf-qt  --noconfirm
 
 
 sudo systemctl enable lightdm.service -f
