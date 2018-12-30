@@ -63,9 +63,9 @@ yay -S robo3t-bin --noconfirm
 
 echo "Redis Desktop web"
 
-yay -S redis-desktop-manager --noconfirm
+# yay -S redis-desktop-manager --noconfirm
 
 echo "PGWEB"
 
-yay -S pgweb-bin --noconfirm
+# yay -S pgweb-bin --noconfirm
 
