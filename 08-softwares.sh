@@ -15,7 +15,7 @@ sudo pacman -S --noconfirm --needed chromium
 
 sudo pacman -S --noconfirm --needed firefox
 
-sudo pacman -S --noconfirm --needed transmission-cli
+# sudo pacman -S --noconfirm --needed transmission-cli
 sudo pacman -S --noconfirm --needed transmission-gtk
 #sudo pacman -S --noconfirm --needed
 
@@ -38,7 +38,7 @@ echo "installation of zippers and unzippers"
 sudo pacman -S --noconfirm --needed unace unrar zip unzip sharutils  uudeview  arj cabextract file-roller
 
 
-yay -S --noconfirm foxitreader
+# yay -S --noconfirm foxitreader
 
 yay -S --noconfirm peek
 
