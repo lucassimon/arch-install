@@ -11,7 +11,7 @@ cd yay && makepkg -si
 
 sudo pacman -S vim xorg-server xf86-input-mouse xf86-input-keyboard xf86-video-vesa xorg-xinit awesome-terminal-fonts terminus-font ttf-dejavu xterm git lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings bash-completion --noconfirm
 
-sudo pacman -S mate mate-extra --noconfirm --needed
+sudo pacman -S mate mate-extra plank --noconfirm --needed
 
 sudo systemctl enable lightdm.service -f
 sudo systemctl set-default graphical.target
