@@ -31,8 +31,6 @@ sudo pacman -S --noconfirm --needed curl ffmpegthumbnailer git gvfs gvfs-mtp hto
 
 sudo pacman -S --noconfirm --needed hardinfo htop lm_sensors lsb-release mlocate net-tools numlockx
 
-sudo pacman -S --noconfirm --needed  ttf-ubuntu-font-famil ttf-droid 
-
 # sudo  pacman -S --noconfirm --needed rxvt-unicode
 
 echo "installation of zippers and unzippers"
