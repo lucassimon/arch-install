@@ -84,6 +84,7 @@ arch-chroot /mnt /bin/bash
 ## Set date time
 
 ```shell
+rm -rf /etc/localtime
 ln -s /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
 ```
@@ -95,11 +96,9 @@ Tire o comentario # de  pt_BR.UTF-8 UTF-8 e qualquer outra localização em `/et
 Defina a variável LANG em locale.conf(5) adequadamente, por exemplo:
 
 ```shell
-nano /etc/locale.conf
+echo LANG=pt_BR.UTF-8 > /etc/locale.conf
 ```
-```ini
-LANG=pt_BR.UTF-8
-```
+
 E gere-as com:
 
 ```shell
@@ -109,20 +108,14 @@ locale-gen
 ## Set keyboar layout in vconsole.conf(5):
 
 ```shell
-nano /etc/vconsole.conf
-```
-
-```ini
-KEYMAP=br-abnt2
+echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 ```
 
 ## Set hostname:
 
 ```shell
-vim /etc/hostname
+echo notebook > /etc/hostname
 ```
-
-notebook
 
 ## Adds  hosts(5):
 
@@ -133,7 +126,7 @@ vim /etc/hosts
 ```ini
 127.0.0.1 localhost
 ::1  localhost
-127.0.1.1 notebook.localdomain notebook
+127.0.1.1 notebook
 ```
 
 ## Gen scripts
@@ -153,7 +146,9 @@ mkinitcpio -p linux
 
 pacman -Syyu
 
-pacman -S autoconf automake binutils make git vim zsh net-tools wireless_tools wpa_supplicant wpa_actiond dialog
+pacman -S autoconf automake binutils make git openssh vim zsh net-tools wireless_tools wpa_supplicant wpa_actiond dialog
+
+systemclt enable dhcpd.service
 ```
 
 ## root password
