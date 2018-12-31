@@ -14,9 +14,9 @@ Particionar o `HOME`, `CURSOS` e o `WORKSPACES`
 | /dev/sda1 | *    | 70G  | 83 | Linux                |
 | /dev/sda2 |      | 391G | 5  | Extended             |
 | /dev/sda5 |      | 8G   | 82 | Linux swap / Solaris |
-| /dev/sda6 |      | 160G | 83 | Linux                |
-| /dev/sda7 |      | 111G | 83 | Linux                |
-| /dev/sda8 |      | 112G | 83 | Linux                |
+| /dev/sda6 |      | 160G | 83 | Linux (Home)         |
+| /dev/sda7 |      | 111G | 83 | Linux (Workspaces)   |
+| /dev/sda8 |      | 112G | 83 | Linux (Courses)      |
 
 
 ```shell
